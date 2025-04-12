@@ -1,0 +1,249 @@
+
+/* Add to wc-countdown-timer.css */
+.wc-countdown-timer-desktop,
+.wc-countdown-timer-mobile {
+  will-change: transform;
+  contain: content;
+}
+
+.countdown {
+  backface-visibility: hidden;
+}
+
+
+
+/* css/wc-countdown-timer.css */
+/* Add these new styles to your existing CSS */
+
+/* Compact Mode Styles */
+.wc-countdown-timer-desktop[data-compact="true"] .countdown {
+    flex-wrap: nowrap !important;
+}
+
+.wc-countdown-timer-desktop[data-compact="true"] .time {
+    margin: 0 5px !important;
+    min-width: auto !important;
+}
+
+.wc-countdown-timer-desktop[data-compact="true"] .number {
+    padding: 0 10px !important;
+    min-width: 40px !important;
+}
+
+.wc-countdown-timer-desktop[data-compact="true"] .unit {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Enhanced Mobile Styles */
+.wc-countdown-timer-mobile .mobile-ui {
+    padding: 12px 0 !important;
+}
+
+.wc-countdown-timer-mobile .pretext1 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+}
+
+.wc-countdown-timer-mobile .number1 {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    display: inline-block !important;
+    min-width: 180px !important;
+}
+
+/* Critical Animation Styles */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .wc-countdown-timer-mobile .pretext1 {
+        font-size: 15px !important;
+    }
+    
+    .wc-countdown-timer-mobile .number1 {
+        font-size: 13px !important;
+        padding: 6px 10px !important;
+        min-width: 160px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .wc-countdown-timer-mobile .number1 {
+        font-size: 12px !important;
+        min-width: 140px !important;
+    }
+}
+
+
+
+
+
+/* =============================================
+   WooCommerce Countdown Timer - Full CSS
+   Includes both desktop and mobile styles
+   ============================================= */
+
+/* Base Container Styles */
+.countdown-timer-section {
+
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Desktop Version Styles */
+.wc-countdown-timer-desktop {
+    display: none; /* Hidden by default, shown on larger screens */
+}
+
+.wc-countdown-timer-desktop .timer {
+    font-size: 60px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.wc-countdown-timer-desktop .pretext {
+    color: #ed2d2f;
+    font-size: 24px;
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.wc-countdown-timer-desktop .countdown {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.wc-countdown-timer-desktop .time {
+    display: inline-block;
+    margin: 0 15px;
+    min-width: 80px;
+}
+
+.wc-countdown-timer-desktop .unit {
+    font-weight: 300;
+    font-size: 25px;
+    color: #7b7b72;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.wc-countdown-timer-desktop .number {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #dedede;
+    color: #ed2d2f;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 4px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Mobile Version Styles */
+.wc-countdown-timer-mobile {
+    display: block;
+    width: 100%;
+}
+
+.wc-countdown-timer-mobile .mobile-ui {
+    background: #fff;
+    margin: 0.75rem 0;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.wc-countdown-timer-mobile .pretext1 {
+    display: block;
+    margin: 0 auto 10px;
+    width: 90%;
+    font-size: 18px;
+    color: #282d3f;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.wc-countdown-timer-mobile .mobileUI.countdown {
+    padding: 8px 0;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.wc-countdown-timer-mobile .number1 {
+    color: #ed2d2f;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.03);
+}
+
+/* Responsive Behavior */
+@media (min-width: 768px) {
+    .wc-countdown-timer-desktop {
+        display: block;
+    }
+    .wc-countdown-timer-mobile {
+        display: none;
+    }
+    
+    .wc-countdown-timer-desktop .time {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wc-countdown-timer-mobile .pretext1 {
+        font-size: 16px;
+    }
+    
+    .wc-countdown-timer-mobile .number1 {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .wc-countdown-timer-desktop .time {
+        margin: 0 10px;
+        min-width: 60px;
+    }
+    
+    .wc-countdown-timer-desktop .number {
+        padding: 0 20px;
+    }
+    
+    .wc-countdown-timer-desktop .unit {
+        font-size: 20px;
+    }
+}
+
+/* Animation for better visibility */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.wc-countdown-timer-mobile .number1 {
+    animation: pulse 2s infinite;
+}
+
+/* Expired State Styles */
+.countdown-expired {
+    color: #888 !important;
+    font-weight: normal !important;
+    animation: none !important;
+}

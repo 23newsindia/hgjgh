@@ -1,0 +1,117 @@
+/* Block Editor Styles */
+.wc-countdown-timer-block .wc-countdown-timer-preview {
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px dashed #ccc;
+}
+
+.wc-countdown-timer-block .wc-countdown-timer-desktop,
+.wc-countdown-timer-block .wc-countdown-timer-mobile {
+    pointer-events: none;
+}
+
+.wc-countdown-timer-block .wc-countdown-timer-desktop {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.wc-countdown-timer-block .wc-countdown-timer-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .wc-countdown-timer-block .wc-countdown-timer-desktop {
+        display: none;
+    }
+    
+    .wc-countdown-timer-block .wc-countdown-timer-mobile {
+        display: block;
+    }
+}
+
+/* Preview Styles */
+.wc-countdown-timer-block .timer {
+    font-size: 60px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.wc-countdown-timer-block .pretext {
+    color: #ed2d2f;
+    font-size: 24px;
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.wc-countdown-timer-block .countdown {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.wc-countdown-timer-block .time {
+    display: inline-block;
+    margin: 0 15px;
+    min-width: 80px;
+}
+
+.wc-countdown-timer-block .unit {
+    font-weight: 300;
+    font-size: 25px;
+    color: #7b7b72;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.wc-countdown-timer-block .number {
+    background: #dedede;
+    color: #ed2d2f;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 4px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Mobile Preview */
+.wc-countdown-timer-block .mobile-ui {
+    background: #fff;
+    margin: 0.75rem 0;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.wc-countdown-timer-block .pretext1 {
+    display: block;
+    margin: 0 auto 10px;
+    width: 90%;
+    font-size: 18px;
+    color: #282d3f;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.wc-countdown-timer-block .mobileUI.countdown {
+    padding: 8px 0;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.wc-countdown-timer-block .number1 {
+    color: #ed2d2f;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.03);
+}

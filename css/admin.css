@@ -1,0 +1,47 @@
+/* css/admin.css */
+.shortcode-generator-section {
+    background: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.shortcode-output {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #2271b1;
+}
+
+.components-panel__body {
+    margin-bottom: 16px;
+}
+
+.components-base-control {
+    margin-bottom: 16px !important;
+}
+
+.components-color-picker {
+    width: 100%;
+}
+
+.components-color-picker__body {
+    padding: 16px !important;
+}
+
+/* css/admin.css */
+/* Add these new styles */
+
+.components-select-control__input {
+    height: auto !important;
+    min-height: 30px !important;
+}
+
+.components-text-control__input[type="time"],
+.components-text-control__input[type="url"] {
+    min-height: 30px !important;
+}
+
+.components-panel__body-toggle.components-button {
+    padding: 16px !important;
+}
